@@ -6,7 +6,7 @@ import os
 app = FastAPI()
 
 # 🔷 Put your Gemini API key here only once
-GEMINI_API_KEY = "AIzaSyAgDrb7ZK7bS6tEnzT5VnwjyWR_FWV1NIU"
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 
 # 🔷 Gemini API endpoint
 GEMINI_URL = f"https://generativelanguage.googleapis.com/v1/models/gemini-2.5-pro:generateContent?key={GEMINI_API_KEY}"
